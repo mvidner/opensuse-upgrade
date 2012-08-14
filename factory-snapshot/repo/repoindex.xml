@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- http://en.opensuse.org/openSUSE:Standards_Repository_Index_Service -->
+<repoindex>
+
+  <repo  name="OSS"
+        alias="OSS"
+      enabled="1"
+          url="http://download.opensuse.org/factory-snapshot/repo/oss/" />
+
+  <repo  name="non OSS"
+        alias="non-OSS"
+      enabled="1"
+          url="http://download.opensuse.org/factory-snapshot/repo/non-oss/" />
+
+  <repo  name="source"
+        alias="source"
+          url="http://download.opensuse.org/factory-snapshot/repo/source/" />
+
+  <repo  name="debug"
+        alias="debug"
+      enabled="1"
+          url="http://download.opensuse.org/factory-snapshot/repo/debug/" />
+
+  <repo  name="source non OSS"
+        alias="source-non-OSS"
+          url="http://download.opensuse.org/factory-snapshot/repo/source-non-oss/" />
+</repoindex>

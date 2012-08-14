@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- http://en.opensuse.org/openSUSE:Standards_Repository_Index_Service -->
+<repoindex>
+
+  <repo  name="oS 12.1 OSS"
+        alias="oS-12.1-OSS"
+          url="http://download.opensuse.org/distribution/12.1/repo/oss/" />
+
+  <repo  name="oS 12.1 non OSS"
+        alias="oS-12.1-non-OSS"
+        enabled="1"
+          url="http://download.opensuse.org/distribution/12.1/repo/non-oss/" />
+
+  <repo  name="oS 12.1 source"
+        alias="oS-12.1-source"
+          url="http://download.opensuse.org/source/distribution/12.1/repo/oss/" />
+
+  <repo  name="oS 12.1 debug"
+        alias="oS-12.1-debug"
+          url="http://download.opensuse.org/debug/distribution/12.1/repo/oss/" />
+
+  <repo  name="oS 12.1 update"
+        alias="oS-12.1-update"
+          url="http://download.opensuse.org/update/12.1/" />
+
+  <repo  name="oS 12.1 debug update"
+        alias="oS-12.1-debug-update"
+          url="http://download.opensuse.org/debug/update/12.1/" />
+
+</repoindex>
