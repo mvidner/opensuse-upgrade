@@ -1,0 +1,9 @@
+#!/bin/bash
+set -x
+set -e
+SVCDIR=`pwd`
+cp /etc/zypp/repos.d /etc/zypp/repos.d.bak
+zypper addservice file://"$SVCDIR"/factory-snapshot factory-snapshot
+zypper refs
+zypper in zypper
+zypper dup
