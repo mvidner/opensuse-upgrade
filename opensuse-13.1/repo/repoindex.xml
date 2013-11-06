@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- http://en.opensuse.org/openSUSE:Standards_Repository_Index_Service -->
+<repoindex>
+
+  <repo  name="oS 13.1 OSS"
+        alias="oS-13.1-OSS"
+      enabled="1"
+          url="http://download.opensuse.org/distribution/13.1/repo/oss/" />
+
+  <repo  name="oS 13.1 non OSS"
+        alias="oS-13.1-non-OSS"
+      enabled="1"
+          url="http://download.opensuse.org/distribution/13.1/repo/non-oss/" />
+
+  <repo  name="oS 13.1 source"
+        alias="oS-13.1-source"
+          url="http://download.opensuse.org/source/distribution/13.1/repo/oss/" />
+
+  <repo  name="oS 13.1 debug"
+        alias="oS-13.1-debug"
+      enabled="1"
+          url="http://download.opensuse.org/debug/distribution/13.1/repo/oss/" />
+
+  <repo  name="oS 13.1 update"
+        alias="oS-13.1-update"
+      enabled="1"
+          url="http://download.opensuse.org/update/13.1/" />
+
+  <repo  name="oS 13.1 update non OSS"
+        alias="oS-13.1-update-non-oss"
+      enabled="1"
+          url="http://download.opensuse.org/update/13.1-non-oss/" />
+
+  <repo  name="oS 13.1 debug update"
+        alias="oS-13.1-debug-update"
+      enabled="1"
+          url="http://download.opensuse.org/debug/update/13.1/" />
+
+  <repo  name="oS 13.1 debug update non OSS"
+        alias="oS-13.1-debug-update-non-oss"
+      enabled="1"
+          url="http://download.opensuse.org/debug/update/13.1-non-oss/" />
+
+</repoindex>

@@ -1,11 +1,10 @@
 #!/bin/bash
 # TODO:
-# - back up /etc/zypp/repos.d
 # - use screen
 
 set -e
 set -u
-RELEASE=${1-12.3}
+RELEASE=${1-13.1}
 
 if test `id -u` -ne 0; then
     echo "Need to be root"
@@ -13,6 +12,7 @@ if test `id -u` -ne 0; then
 fi
 
 zypper removeservice opensuse-12.2 || :
+zypper removeservice opensuse-12.3 || :
 zypper removeservice opensuse || :
 SVCDIR=$(cd $(dirname $0); pwd)
 zypper addservice file://"$SVCDIR"/opensuse-$RELEASE opensuse
