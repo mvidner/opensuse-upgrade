@@ -14,12 +14,12 @@
 
   <repo  name="source"
         alias="source"
-          url="http://download.opensuse.org/factory-snapshot/repo/source/" />
+          url="http://download.opensuse.org/source/factory-snapshot/repo/oss/" />
 
   <repo  name="debug"
         alias="debug"
       enabled="1"
-          url="http://download.opensuse.org/factory-snapshot/repo/debug/" />
+          url="http://download.opensuse.org/debug/factory-snapshot/repo/oss/" />
 
   <repo  name="source non OSS"
         alias="source-non-OSS"
