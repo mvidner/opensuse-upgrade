@@ -27,7 +27,7 @@ restore () {
   overwrite $1.bak $1
 }
 
-if [ "$1" = "-r" ]; then
+if [ "${1-}" = "-r" ]; then
   METHOD=restore
 else
   METHOD=backup
