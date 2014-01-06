@@ -20,7 +20,7 @@ zypper addservice file://"$SVCDIR"/$SERVICE opensuse
 if [ "$SERVICE" = "factory-snapshot" ]; then
   RELEASE="openSUSE_Factory"
 else
-  RELEASE="openSUSE_{SERVICE#opensuse-}"
+  RELEASE="openSUSE_${SERVICE#opensuse-}"
 fi
 sed -i  "s/openSUSE_\(1[0-9]\\.[0-9]\|Factory\)/$RELEASE/g" /etc/zypp/repos.d/*
 
