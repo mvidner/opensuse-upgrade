@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- http://en.opensuse.org/openSUSE:Standards_Repository_Index_Service -->
+<repoindex>
+
+  <repo  name="oS 42.1 OSS"
+        alias="oS-42.1-OSS"
+      enabled="1"
+          url="http://download.opensuse.org/distribution/leap/42.1/repo/oss/" />
+
+  <repo  name="oS 42.1 non OSS"
+        alias="oS-42.1-non-OSS"
+      enabled="1"
+          url="http://download.opensuse.org/distribution/leap/42.1/repo/non-oss/" />
+
+  <repo  name="oS 42.1 source"
+        alias="oS-42.1-source"
+          url="http://download.opensuse.org/source/distribution/leap/42.1/repo/oss/" />
+
+  <repo  name="oS 42.1 debug"
+        alias="oS-42.1-debug"
+      enabled="1"
+          url="http://download.opensuse.org/debug/distribution/leap/42.1/repo/oss/" />
+
+  <repo  name="oS 42.1 update"
+        alias="oS-42.1-update"
+      enabled="1"
+          url="http://download.opensuse.org/update/leap/42.1/oss/" />
+
+  <repo  name="oS 42.1 update non OSS"
+        alias="oS-42.1-update-non-oss"
+      enabled="1"
+          url="http://download.opensuse.org/update/leap/42.1/non-oss/" />
+
+  <repo  name="oS 42.1 debug update"
+        alias="oS-42.1-debug-update"
+      enabled="1"
+          url="http://download.opensuse.org/debug/update/leap/42.1/oss/" />
+
+  <repo  name="oS 42.1 debug update non OSS"
+        alias="oS-42.1-debug-update-non-oss"
+      enabled="1"
+          url="http://download.opensuse.org/debug/update/leap/42.1/non-oss/" />
+
+</repoindex>

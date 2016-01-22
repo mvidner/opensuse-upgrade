@@ -2,7 +2,7 @@
 
 set -e
 set -u
-SERVICE=${1-opensuse-13.2}
+SERVICE=${1-opensuse-42.1}
 
 if test `id -u` -ne 0; then
     echo "Need to be root"
@@ -13,9 +13,8 @@ if [ "$TERM" != screen ]; then
     echo "Warning: using `screen` or `tmux` is recommended just in case your X session dies"
 fi
 
-zypper removeservice opensuse-12.2 || :
-zypper removeservice opensuse-12.3 || :
 zypper removeservice opensuse-13.1 || :
+zypper removeservice opensuse-13.2 || :
 zypper removeservice opensuse || :
 SVCDIR=$(cd $(dirname $0); pwd)
 zypper addservice file://"$SVCDIR"/$SERVICE opensuse
