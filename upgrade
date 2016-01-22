@@ -19,12 +19,15 @@ zypper removeservice opensuse || :
 SVCDIR=$(cd $(dirname $0); pwd)
 zypper addservice file://"$SVCDIR"/$SERVICE opensuse
 
-if [ "$SERVICE" = "factory-snapshot" ]; then
-  RELEASE="openSUSE_Factory"
-else
-  RELEASE="openSUSE_${SERVICE#opensuse-}"
-fi
-sed -i  "s/openSUSE_\(1[0-9]\\.[0-9]\|Factory\)/$RELEASE/g" /etc/zypp/repos.d/*
+case "$SERVICE" in
+  factory-snapshot)
+    RELEASE="openSUSE_Factory" ;;
+  opensuse-42.1)
+    RELEASE="openSUSE_Leap_42.1" ;;
+  *)
+    RELEASE="openSUSE_${SERVICE#opensuse-}" ;;
+esac
+sed -i  "s/openSUSE_\(Leap_\)\?\(1[0-9]\\.[0-9]\|Factory\)/$RELEASE/g" /etc/zypp/repos.d/*
 
 zypper refresh-services
 zypper refresh
