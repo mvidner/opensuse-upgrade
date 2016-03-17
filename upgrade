@@ -10,7 +10,7 @@ if test `id -u` -ne 0; then
 fi
 
 if [ "$TERM" != screen ]; then
-    echo "Warning: using `screen` or `tmux` is recommended just in case your X session dies"
+    echo 'Warning: using `screen` or `tmux` is recommended just in case your X session dies'
 fi
 
 zypper removeservice opensuse-13.1 || :
