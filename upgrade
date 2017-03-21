@@ -2,7 +2,7 @@
 
 set -e
 set -u
-SERVICE=${1-opensuse-42.1}
+SERVICE=${1-opensuse-42.2}
 
 if test `id -u` -ne 0; then
     echo "Need to be root"
@@ -13,8 +13,8 @@ if [ "$TERM" != screen ]; then
     echo 'Warning: using `screen` or `tmux` is recommended just in case your X session dies'
 fi
 
-zypper removeservice opensuse-13.1 || :
 zypper removeservice opensuse-13.2 || :
+zypper removeservice opensuse-42.1 || :
 zypper removeservice opensuse || :
 SVCDIR=$(cd $(dirname $0); pwd)
 zypper addservice file://"$SVCDIR"/$SERVICE opensuse
@@ -22,12 +22,12 @@ zypper addservice file://"$SVCDIR"/$SERVICE opensuse
 case "$SERVICE" in
   factory-snapshot)
     RELEASE="openSUSE_Factory" ;;
-  opensuse-42.1)
-    RELEASE="openSUSE_Leap_42.1" ;;
+  opensuse-42.2)
+    RELEASE="openSUSE_Leap_42.2" ;;
   *)
     RELEASE="openSUSE_${SERVICE#opensuse-}" ;;
 esac
-sed -i  "s/openSUSE_\(Leap_\)\?\(1[0-9]\\.[0-9]\|Factory\)/$RELEASE/g" /etc/zypp/repos.d/*
+sed -i  "s/openSUSE_\(Leap_\)\?\([0-9][0-9]\\.[0-9]\|Factory\)/$RELEASE/g" /etc/zypp/repos.d/*
 
 zypper refresh-services
 zypper refresh
