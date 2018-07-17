@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!-- http://en.opensuse.org/openSUSE:Standards_Repository_Index_Service -->
+<repoindex>
+
+  <repo  name="oS 15.0 OSS"
+        alias="oS-15.0-OSS"
+      enabled="1"
+          url="https://download.opensuse.org/distribution/leap/15.0/repo/oss/" />
+
+  <repo  name="oS 15.0 non OSS"
+        alias="oS-15.0-non-OSS"
+      enabled="1"
+          url="https://download.opensuse.org/distribution/leap/15.0/repo/non-oss/" />
+
+  <repo  name="oS 15.0 source"
+        alias="oS-15.0-source"
+      enabled="0"
+          url="https://download.opensuse.org/source/distribution/leap/15.0/repo/oss/" />
+
+  <repo  name="oS 15.0 debug"
+        alias="oS-15.0-debug"
+      enabled="1"
+          url="https://download.opensuse.org/debug/distribution/leap/15.0/repo/oss/" />
+
+  <repo  name="oS 15.0 update"
+        alias="oS-15.0-update"
+      enabled="1"
+          url="https://download.opensuse.org/update/leap/15.0/oss/" />
+
+  <repo  name="oS 15.0 update non OSS"
+        alias="oS-15.0-update-non-oss"
+      enabled="1"
+          url="https://download.opensuse.org/update/leap/15.0/non-oss/" />
+
+  <repo  name="oS 15.0 debug update"
+        alias="oS-15.0-debug-update"
+      enabled="1"
+          url="https://download.opensuse.org/debug/update/leap/15.0/oss/" />
+
+  <repo  name="oS 15.0 debug update non OSS"
+        alias="oS-15.0-debug-update-non-oss"
+      enabled="1"
+          url="https://download.opensuse.org/debug/update/leap/15.0/non-oss/" />
+
+</repoindex>
