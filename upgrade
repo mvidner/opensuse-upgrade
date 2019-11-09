@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 set -u
-SERVICE=${1-opensuse-15.0}
+SERVICE=${1-opensuse-15.1}
 
 if test `id -u` -ne 0; then
     echo "Need to be root"
@@ -16,6 +16,7 @@ zypper removeservice opensuse-13.2 || :
 zypper removeservice opensuse-42.1 || :
 zypper removeservice opensuse-42.2 || :
 zypper removeservice opensuse-42.3 || :
+zypper removeservice opensuse-15.0 || :
 zypper removeservice opensuse || :
 SVCDIR=$(cd $(dirname $0); pwd)
 zypper addservice file://"$SVCDIR"/$SERVICE opensuse
@@ -25,6 +26,8 @@ case "$SERVICE" in
     RELEASE="openSUSE_Factory" ;;
   opensuse-15.0)
     RELEASE="openSUSE_Leap_15.0" ;;
+  opensuse-15.1)
+    RELEASE="openSUSE_Leap_15.1" ;;
   *)
     RELEASE="openSUSE_${SERVICE#opensuse-}" ;;
 esac
