@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 set -u
-SERVICE=${1-opensuse-15.1}
+SERVICE=${1-opensuse-15.2}
 
 if test `id -u` -ne 0; then
     echo "Need to be root"
@@ -12,11 +12,11 @@ if [ "$TERM" != screen ]; then
     echo 'Warning: using `screen` or `tmux` is recommended just in case your X session dies'
 fi
 
-zypper removeservice opensuse-13.2 || :
 zypper removeservice opensuse-42.1 || :
 zypper removeservice opensuse-42.2 || :
 zypper removeservice opensuse-42.3 || :
 zypper removeservice opensuse-15.0 || :
+zypper removeservice opensuse-15.1 || :
 zypper removeservice opensuse || :
 SVCDIR=$(cd $(dirname $0); pwd)
 zypper addservice file://"$SVCDIR"/$SERVICE opensuse
@@ -28,6 +28,8 @@ case "$SERVICE" in
     RELEASE="openSUSE_Leap_15.0" ;;
   opensuse-15.1)
     RELEASE="openSUSE_Leap_15.1" ;;
+  opensuse-15.2)
+    RELEASE="openSUSE_Leap_15.2" ;;
   *)
     RELEASE="openSUSE_${SERVICE#opensuse-}" ;;
 esac
