@@ -1,22 +1,23 @@
 #!/bin/bash
 set -e
 set -u
-SERVICE=${1-opensuse-15.2}
+SERVICE=${1-opensuse-15.3}
 
 if test `id -u` -ne 0; then
     echo "Need to be root"
     exit 1
 fi
 
-if [ "$TERM" != screen ]; then
-    echo 'Warning: using `screen` or `tmux` is recommended just in case your X session dies'
-fi
+case "$TERM" in
+    screen*) ;;
+    *)
+        echo 'Warning: using `screen` or `tmux` is recommended just in case your X session dies'
+        ;;
+esac
 
-zypper removeservice opensuse-42.1 || :
-zypper removeservice opensuse-42.2 || :
-zypper removeservice opensuse-42.3 || :
 zypper removeservice opensuse-15.0 || :
 zypper removeservice opensuse-15.1 || :
+zypper removeservice opensuse-15.2 || :
 zypper removeservice opensuse || :
 SVCDIR=$(cd $(dirname $0); pwd)
 zypper addservice file://"$SVCDIR"/$SERVICE opensuse
@@ -30,12 +31,14 @@ case "$SERVICE" in
     RELEASE="openSUSE_Leap_15.1" ;;
   opensuse-15.2)
     RELEASE="openSUSE_Leap_15.2" ;;
+  opensuse-15.3)
+    RELEASE="openSUSE_Leap_15.3" ;;
   *)
     RELEASE="openSUSE_${SERVICE#opensuse-}" ;;
 esac
 sed -i  "s/openSUSE_\(Leap_\)\?\([0-9][0-9]\\.[0-9]\|Factory\)/$RELEASE/g" /etc/zypp/repos.d/*
 
-zypper refresh-services
-zypper refresh
-zypper install zypper
-zypper dup
+zypper --releasever "${RELEASE##*_}" refresh-services
+zypper --releasever "${RELEASE##*_}" refresh
+zypper --releasever "${RELEASE##*_}" install zypper
+zypper --releasever "${RELEASE##*_}" dup
