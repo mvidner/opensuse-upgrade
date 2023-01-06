@@ -2,44 +2,44 @@
 <!-- http://en.opensuse.org/openSUSE:Standards_Repository_Index_Service -->
 <repoindex>
 
-  <repo  name="oS 15.3 OSS"
-        alias="oS-15.3-OSS"
+  <repo  name="oS 15.4 OSS"
+        alias="oS-15.4-OSS"
       enabled="1"
-          url="https://download.opensuse.org/distribution/leap/15.3/repo/oss/" />
+          url="https://download.opensuse.org/distribution/leap/15.4/repo/oss/" />
 
-  <repo  name="oS 15.3 non OSS"
-        alias="oS-15.3-non-OSS"
+  <repo  name="oS 15.4 non OSS"
+        alias="oS-15.4-non-OSS"
       enabled="1"
-          url="https://download.opensuse.org/distribution/leap/15.3/repo/non-oss/" />
+          url="https://download.opensuse.org/distribution/leap/15.4/repo/non-oss/" />
 
-  <repo  name="oS 15.3 source"
-        alias="oS-15.3-source"
+  <repo  name="oS 15.4 source"
+        alias="oS-15.4-source"
       enabled="0"
-          url="https://download.opensuse.org/source/distribution/leap/15.3/repo/oss/" />
+          url="https://download.opensuse.org/source/distribution/leap/15.4/repo/oss/" />
 
-  <repo  name="oS 15.3 debug"
-        alias="oS-15.3-debug"
+  <repo  name="oS 15.4 debug"
+        alias="oS-15.4-debug"
       enabled="1"
-          url="https://download.opensuse.org/debug/distribution/leap/15.3/repo/oss/" />
+          url="https://download.opensuse.org/debug/distribution/leap/15.4/repo/oss/" />
 
-  <repo  name="oS 15.3 update"
-        alias="oS-15.3-update"
+  <repo  name="oS 15.4 update"
+        alias="oS-15.4-update"
       enabled="1"
-          url="https://download.opensuse.org/update/leap/15.3/oss/" />
+          url="https://download.opensuse.org/update/leap/15.4/oss/" />
 
-  <repo  name="oS 15.3 update non OSS"
-        alias="oS-15.3-update-non-oss"
+  <repo  name="oS 15.4 update non OSS"
+        alias="oS-15.4-update-non-oss"
       enabled="1"
-          url="https://download.opensuse.org/update/leap/15.3/non-oss/" />
+          url="https://download.opensuse.org/update/leap/15.4/non-oss/" />
 
-  <repo  name="oS 15.3 debug update"
-        alias="oS-15.3-debug-update"
+  <repo  name="oS 15.4 debug update"
+        alias="oS-15.4-debug-update"
       enabled="1"
-          url="https://download.opensuse.org/debug/update/leap/15.3/oss/" />
+          url="https://download.opensuse.org/debug/update/leap/15.4/oss/" />
 
-  <repo  name="oS 15.3 debug update non OSS"
-        alias="oS-15.3-debug-update-non-oss"
+  <repo  name="oS 15.4 debug update non OSS"
+        alias="oS-15.4-debug-update-non-oss"
       enabled="1"
-          url="https://download.opensuse.org/debug/update/leap/15.3/non-oss/" />
+          url="https://download.opensuse.org/debug/update/leap/15.4/non-oss/" />
 
 </repoindex>
